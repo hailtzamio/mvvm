@@ -27,7 +27,9 @@ class MainViewModel : BaseViewModel() {
     }
 
     fun getData() {
+        loading.value = true
         viewModelScope.launch {
+            loading.value = false
             widgetLiveData2.postValue(true)
         }
     }

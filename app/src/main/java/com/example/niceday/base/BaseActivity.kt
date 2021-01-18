@@ -52,4 +52,12 @@ abstract class BaseActivity<VM : ViewModel, T : ViewDataBinding> : AppCompatActi
     }
 
     protected open fun initViews() {}
+
+    fun showLoading() {
+        LoadingDialog.showProgressDialog(this, 0, 0)
+    }
+
+    fun hideLoading() {
+        LoadingDialog.dismissProgressDialog()
+    }
 }

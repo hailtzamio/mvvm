@@ -28,5 +28,9 @@ class MainActivity : BaseActivity<MainViewModel, ViewDataBinding>() {
         viewModel.widgetLiveData2.observe(this) {
             Log.d("hailpt", "response here")
         }
+
+        viewModel.loading.observe(this) {
+            showLoading()
+        }
     }
 }
